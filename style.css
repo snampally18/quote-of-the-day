@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 50%, #d4bbfc 100%);
+  background-attachment: fixed;
+}
+
+.site-footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #4a4a6a;
+}
+
+.site-footer p {
+  margin: 0 0 4px;
+}
+
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4a3f9e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 36px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b2d54;
+}
+
+.tagline {
+  margin: 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6a5acd;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: #5a5f78;
+  font-size: 15px;
+}
+
+#reveal-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 25px rgba(118, 75, 162, 0.35);
+}
+
+#reveal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(118, 75, 162, 0.45);
+}
+
+#reveal-btn:active {
+  transform: translateY(0);
+}
+
+.result {
+  margin-top: 32px;
+  animation: fadeIn 0.5s ease;
+}
+
+.result.hidden {
+  display: none;
+}
+
+#quote-text {
+  margin: 0 0 12px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2b2d54;
+  font-style: italic;
+}
+
+#quote-text::before {
+  content: "\201C";
+}
+
+#quote-text::after {
+  content: "\201D";
+}
+
+#quote-author {
+  margin: 0 0 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #7b7fa6;
+}
+
+.focus-pill {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 26px;
+  border-radius: 14px;
+  background: rgba(245, 166, 35, 0.15);
+}
+
+.focus-pill span {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #c17d13;
+}
+
+.focus-pill strong {
+  font-size: 18px;
+  color: #8a5a00;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
